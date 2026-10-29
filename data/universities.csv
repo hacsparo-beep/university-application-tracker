@@ -1,1 +1,11 @@
-
+University_id,name,country,deadline,fee
+University of Toronto,Canada,2027-01-15,180
+University of Manchester,UK,2027-01-31,0
+McGill University,Canada,2027-01-15,129
+University of Edinburgh,UK,2027-01-31,0
+Arizona State University,USA,2027-02-01,70
+Boston University,USA,2027-01-04,80
+University of Melbourne,Australia,2026-12-15,100
+University of Amsterdam,Netherlands,2027-05-01,100
+TU Munich,Germany,2027-01-15,0
+National University of Singapore,Singapore,2027-02-28,20
