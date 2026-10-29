@@ -49,4 +49,3 @@ or tutors who support them.
 
 Sample data (10 records each) is in the `data` folder:
 `universities.csv`, `applications.csv`, `documents.csv`.
-All student names are made up.
