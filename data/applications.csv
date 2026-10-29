@@ -1,0 +1,11 @@
+application_id,student_name,university_id,status
+1,Layla,1,In progress
+2,Layla,2,Not started
+3,Layla,7,Submitted
+4,Omar,3,In progress
+5,Omar,5,Not started
+6,Omar,10,Not started
+7,Sara,4,In progress
+8,Sara,6,Submitted
+9,Yusuf,9,Not started
+10,Yusuf,8,In progress
