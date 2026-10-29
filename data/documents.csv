@@ -1,0 +1,11 @@
+document_id,application_id,name,submitted
+1,1,Personal essay,True
+2,1,Transcript,True
+3,1,Recommendation letter,False
+4,3,Personal essay,True
+5,3,Transcript,True
+6,4,Transcript,False
+7,4,SAT score report,False
+8,7,Personal essay,False
+9,9,Passport copy,True
+10,10,Recommendation letter,False
