@@ -6,12 +6,11 @@ This command-line-style tool helps students (and the people who help
 them) see which applications are in progress, which documents are
 still missing, and which deadlines are coming up next.
 
-**Users:** high school students applying to university, and advisors
+Users: high school students applying to university, and advisors
 or tutors who support them.
 
-**Interface track:** Track A (tkinter), written by me without AI.
 
-## Modules
+Modules:
 
 | Module | Purpose |
 |---|---|
@@ -19,13 +18,16 @@ or tutors who support them.
 | Applications | Keeps each student's applications and their status |
 | Documents | Keeps the documents each application requires |
 
-## Functionalities
+Functionalities
 
-**Universities**
-1. Add a university: name, country, deadline, fee -> new university record
-2. Update a university's deadline or fee: university ID, new deadline or fee -> updated record
-3. Remove a university: university ID -> confirmation message
-4. List universities by country: country -> matching universities sorted by deadline
+Universities:
+1. Add a university button:(Input text box: name,
+text box: country,
+text box: deadline,
+Append: add university and \tab
+2. Update a university's deadline or fee: add university name, new deadline or fee: updated record.
+3. Remove a university: university ID -> confirmation message.
+4. List universities: Matching universities sorted by deadline.
 
 **Applications**
 5. Start an application: student name, university ID -> new application with status "Not started"
