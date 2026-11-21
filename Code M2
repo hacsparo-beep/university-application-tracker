@@ -6,6 +6,10 @@ class Myuniversitylist():
       self.university_coutry = species
       self.decision_track = decision_track
 
+def add_university(universities, university):
+    universities.append(university)
+    return universities
+
 def my_universities(university_name):
     name_file = "universities.txt"
     universities = open (name_file, 'a')
