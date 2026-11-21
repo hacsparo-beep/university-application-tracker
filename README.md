@@ -21,18 +21,18 @@ Modules:
 Functionalities
 
 Universities:
-1. Add a university button:(Input text box: name,
+Add a university button:(Input text box: name,
 text box: country,
 text box: deadline,
-Append: add university and \tab
-2. Update a university's deadline or fee: add university name, new deadline or fee: updated record.
-3. Remove a university: university ID -> confirmation message.
-4. List universities: Matching universities sorted by deadline.
+text box: Application type
+Update a university's deadline: add university name, new deadline: updated record.
+Remove a university: university name.
+List universities: list universities.
 
 **Applications**
 5. Start an application: student name, university ID -> new application with status "Not started"
-6. Update application status: application ID, new status -> updated application
-7. Search applications by student: student name -> that student's applications
+6. Update application status: university name, new status -> updated application
+7. Search applications: university name -> university application
 8. List upcoming deadlines: number of days -> applications due within that time, soonest first
 
 **Documents**
@@ -45,7 +45,7 @@ Append: add university and \tab
 
 | Module | Fields |
 |---|---|
-| Universities | university_id, name, country, deadline, fee |
+| Universities | university_name, country, deadline, application_type |
 | Applications | application_id, student_name, university_id, status |
 | Documents | document_id, application_id, name, submitted |
 
