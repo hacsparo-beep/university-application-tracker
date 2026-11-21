@@ -3,7 +3,7 @@ class Myuniversitylist():
   def __init__(self, university_name, deadline, university_country, decision_track):
       self.university_name= university_name
       self.deadline = deadline
-      self.university_coutry = species
+      self.university_country = country
       self.decision_track = decision_track
 
 def add_university(universities, university):
