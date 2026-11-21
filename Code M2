@@ -21,5 +21,6 @@ def main():
     university_name = input("type a university: ")
     text = my_universities(university_name)
     print(text)
+    university= input("add a university") 
   
 main()
