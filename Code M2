@@ -1,2 +1,21 @@
+name_file= "universities.txt"
 class Myuniversitylist():
-  def __init__(self, university_name, deadline, ):
+  def __init__(self, university_name, deadline, university_country, decision_track):
+      self.university_name= university_name
+      self.deadline = deadline
+      self.university_coutry = species
+      self.decision_track = decision_track
+
+def my_universities(university_name):
+    name_file = "universities.txt"
+    universities = open (name_file, 'a')
+    universities.write(university_name +'\n')
+    universities.close()
+    return "university saved: " + university_name
+
+def main():
+    university_name = input("type a university: ")
+    text = my_universities(university_name)
+    print(text)
+  
+main()
