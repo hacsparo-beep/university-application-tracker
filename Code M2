@@ -1,0 +1,2 @@
+class Myuniversitylist():
+  def __init__(self, university_name, deadline, ):
