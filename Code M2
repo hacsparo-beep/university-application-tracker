@@ -9,7 +9,12 @@ class Myuniversitylist():
       self.application_track = application_track
 
 class application():
-  def__init__(self,
+  def__init__(self, university, status="Not started", documents=None):
+        self.university = university
+        self.status = status
+        if documents is None:
+            documents = []
+        self.documents = documents
 
 def add_university(universities, university):
     universities.append(university)
