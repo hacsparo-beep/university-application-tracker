@@ -123,12 +123,8 @@ def remove_document(documents, university_name, document_name):
         return "Document removed."
     return "Document not found."
 
-
-
-
 def main():
     universities = read_universities(name_file)
     applications = read_application(application_file)
     documents = read_documents(document_file)
-  
 main()
