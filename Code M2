@@ -95,7 +95,26 @@ def update_status(applications, university_name, new_status):
             return "Status updated."
     return "Application not found."
 
+def search_applications(applications, university_name):
+    lines = []
+    for application in applications:
+        if application.university_name == university_name:
+            lines.append(application.university_name + " - " + application.status)
+    return lines
 
+def add_document(documents, university_name, document_name):
+    if document_name == "":
+        return "Please type a document name."
+    documents.append(university_name + " - " + document_name)
+    return "Document saved."
+
+def change_document(documents, university_name, old_name, new_name):
+    old = university_name + " - " + old_name
+    if old in documents:
+        documents.remove(old)
+        documents.append(university_name + " - " + new_name)
+        return "Document changed."
+    return "Document not found."
 
 
 def main():
