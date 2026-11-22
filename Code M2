@@ -63,19 +63,18 @@ def read_documents(file_name):
         print("File not found:", file_name)
     return documents
 
-def add_university(university_name, deadline, university_country, app_type):
+def add_university(universities, university_name, deadline, university_country, app_type):
     if university_name == "" or university_country == "" or app_type == "":
-        message= input("Please fill in every box.")
-        return message
-    if is_valid_date(deadline) == False:
-        return "The deadline must look like 2027-01-15."
-    universities = read_universities(university_file)
-    for u in universities:
-        if u.university_name.lower() == university_name.lower():
-            return "That university is already in the list."
-        else():
-            return "University saved: " + name
- 
+        return "Please fill in every box."
+    universities.append(Myuniversitylist(university_name, deadline, university_country, app_type)
+    return "University saved: " + university_name
+
+def remove_university(universities, university_name):
+    for university in universities:
+        if university.university_name == university_name:
+            universities.remove(university)
+            return "University removed."
+    return "University not found."
 
 def main():
     universities = read_universities(name_file)
