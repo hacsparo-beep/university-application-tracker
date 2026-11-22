@@ -2,7 +2,7 @@ import datetime
 name_file= "universities.txt"
 application_file = "applications.txt"
 document_file = "document.txt"
-application_status= ("started", "in progress", "not started", "submitted")
+application_status= ("in progress", "not started", "submitted")
 
 class Myuniversitylist(name, deadline, country, decision_track):
   def __init__(self, university_name, deadline, university_country, decision_track):
@@ -85,6 +85,17 @@ def start_application(universities, applications, university_name):
             applications.append(Application(university_name, "not started"))
             return "Application saved: " + university_name
     return "University not found."
+
+def update_status(applications, university_name, new_status):
+    if new_status not in application_status:
+        return "The status must be not started, in progress or submitted."
+    for application in applications:
+        if application.university_name == university_name:
+            application.status = new_status
+            return "Status updated."
+    return "Application not found."
+
+
 
 
 def main():
