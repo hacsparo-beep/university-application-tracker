@@ -34,20 +34,34 @@ def read_universities(university_file):
       return universities
 
 def read_application(application_file):
-    file = "application.txt"
-    application = open (file, 'a')
-    application.write(university_name +'\n')
-    application.close()
-    return "application saved: " + university_name
+    application = []
+    try:
+        file = open(application_file, "r")
+        student = file.readline()
+        while student != "":
+            student = student.replace("\n", "")
+            name = file.readline().replace("\n", "")
+            status = file.readline().replace("\n", "")
+            if status in application_status:
+                applications.append(Application(student, name, status))
+            else:
+                print("Skipping bad record:", student)
+            student = file.readline()
+        file.close()
+    except FileNotFoundError:
+        print("File not found:", application_file)
+    return applications
 
 def read_documents(file_name):
     documents = []
     try:
         file = open(file_name, "r")
-        university_name = file.readline()
-        while university_name != "":
-            document_name = file.readline()
-            if document_name != "":
+        for line in file: 
+             documents.append(line.replace("\n", "")
+        file.close()
+    except FileNotFoundError:
+        print("File not found:", file_name)
+    return documents
 
 def add_university(university_name, deadline, university_country, app_type):
     if university_name == "" or university_country == "" or app_type == "":
@@ -64,9 +78,8 @@ def add_university(university_name, deadline, university_country, app_type):
  
 
 def main():
-    university_name = input("type a university: ")
-    text = my_universities(university_name)
-    print(text)
-    university= input("add a university") 
+    universities = read_universities(name_file)
+    applications = read_application(application_file)
+    documents = read_documents(document_file)
   
 main()
