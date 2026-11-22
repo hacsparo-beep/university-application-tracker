@@ -79,6 +79,12 @@ def list_universities(universities):
         lines.append(university.university_name + ", " + university.university_country + ", " + university.deadline + ", " + university.application_track)
     return lines
 
+def start_application(universities, applications, university_name):
+    for university in universities:
+        if university.university_name == university_name:
+            applications.append(Application(university_name, "not started"))
+            return "Application saved: " + university_name
+    return "University not found."
 
 
 def main():
