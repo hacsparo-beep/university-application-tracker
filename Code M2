@@ -34,19 +34,16 @@ def read_universities(university_file):
       return universities
 
 def read_application(application_file):
+    file = open(application_file, "r")
     application = []
     try:
-        file = open(application_file, "r")
-        student = file.readline()
-        while student != "":
-            student = student.replace("\n", "")
             name = file.readline().replace("\n", "")
             status = file.readline().replace("\n", "")
             if status in application_status:
-                applications.append(Application(student, name, status))
+                applications.append(Application(name, status))
             else:
-                print("Skipping bad record:", student)
-            student = file.readline()
+                print("record not found:", name)
+            name = file.readline()
         file.close()
     except FileNotFoundError:
         print("File not found:", application_file)
@@ -75,6 +72,14 @@ def remove_university(universities, university_name):
             universities.remove(university)
             return "University removed."
     return "University not found."
+
+def list_universities(universities):
+    lines = []
+    for university in universities:
+        lines.append(university.university_name + ", " + university.university_country + ", " + university.deadline + ", " + university.application_track)
+    return lines
+
+
 
 def main():
     universities = read_universities(name_file)
