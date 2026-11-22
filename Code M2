@@ -123,6 +123,24 @@ def remove_document(documents, university_name, document_name):
         return "Document removed."
     return "Document not found."
 
+def save_all_files():
+    file = open(name_file, "w")
+    for university in universities:
+        file.write(university.university_name + "\n")
+        file.write(university.university_country + "\n")
+        file.write(university.deadline + "\n")
+        file.write(university.application_track + "\n")
+    file.close()
+    file = open(application_file, "w")
+    for a in applications:
+        file.write(application.university_name + "\n")
+        file.write(application.status + "\n")
+    file.close()
+    file = open(document_file, "w")
+    for document in documents:
+        file.write(document + "\n")
+    file.close()
+
 def main():
     universities = read_universities(name_file)
     applications = read_application(application_file)
