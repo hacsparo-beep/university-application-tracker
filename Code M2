@@ -8,29 +8,37 @@ class Myuniversitylist():
       self.university_country = country
       self.application_track = application_track
 
-class application():
-  def__init__(self, university_name, status="Not started", documents=None):
+class Application():
+    def __init__(self, student, university_name, status):
+        self.student = student
         self.university_name = university_name
         self.status = status
-        if documents is None:
-            documents = []
-        self.documents = documents
 
 class Document():
     def __init__(self, university_name, document_name):
         self.university_name = university_name
         self.document_name = document_name
 
-def add_university(universities, university):
-    universities.append(university)
-    return universities
-
-def my_universities(university_name):
+def read_universities(university_file):
     name_file = "universities.txt"
     universities = open (name_file, 'a')
     universities.write(university_name +'\n')
     universities.close()
     return "university saved: " + university_name
+
+def add_university(university_name, deadline, university_country, app_type):
+    if university_name == "" or university_country == "" or app_type == "":
+        message= input("Please fill in every box.")
+        return message
+    if is_valid_date(deadline) == False:
+        return "The deadline must look like 2027-01-15."
+    universities = read_universities(university_file)
+    for u in universities:
+        if u.university_name.lower() == university_name.lower():
+            return "That university is already in the list."
+        else():
+            return "University saved: " + name
+ 
 
 def main():
     university_name = input("type a university: ")
