@@ -9,7 +9,7 @@ class Myuniversitylist():
       self.application_track = application_track
 
 class Application():
-    def __init__(self, student, university_name, status):
+    def __init__(self, university_name, status):
         self.student = student
         self.university_name = university_name
         self.status = status
@@ -25,6 +25,22 @@ def read_universities(university_file):
     universities.write(university_name +'\n')
     universities.close()
     return "university saved: " + university_name
+
+def read_application(application_file):
+    file = "application.txt"
+    application = open (file, 'a')
+    application.write(university_name +'\n')
+    application.close()
+    return "application saved: " + university_name
+
+def read_documents(file_name):
+    documents = []
+    try:
+        file = open(file_name, "r")
+        university_name = file.readline()
+        while university_name != "":
+            document_name = file.readline()
+            if document_name != "":
 
 def add_university(university_name, deadline, university_country, app_type):
     if university_name == "" or university_country == "" or app_type == "":
