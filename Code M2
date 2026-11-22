@@ -1,4 +1,6 @@
 name_file= "universities.txt"
+application_file = "applications.txt"
+document_file = "document.txt"
 application_status= ("started", "in progress", "not started")
 
 class Myuniversitylist():
