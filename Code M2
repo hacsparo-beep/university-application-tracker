@@ -116,6 +116,14 @@ def change_document(documents, university_name, old_name, new_name):
         return "Document changed."
     return "Document not found."
 
+def change_document(documents, university_name, old_name, new_name):
+    old = university_name + " - " + old_name
+    if old in documents:
+        documents.remove(old)
+        documents.append(university_name + " - " + new_name)
+        return "Document changed."
+    return "Document not found."
+
 
 def main():
     universities = read_universities(name_file)
