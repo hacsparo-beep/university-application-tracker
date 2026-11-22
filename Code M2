@@ -1,9 +1,10 @@
+import datetime
 name_file= "universities.txt"
 application_file = "applications.txt"
 document_file = "document.txt"
-application_status= ("started", "in progress", "not started")
+application_status= ("started", "in progress", "not started", "submitted")
 
-class Myuniversitylist():
+class Myuniversitylist(name, deadline, country, decision_track):
   def __init__(self, university_name, deadline, university_country, decision_track):
       self.university_name= university_name
       self.deadline = deadline
@@ -12,21 +13,25 @@ class Myuniversitylist():
 
 class Application():
     def __init__(self, university_name, status):
-        self.student = student
         self.university_name = university_name
         self.status = status
 
-class Document():
-    def __init__(self, university_name, document_name):
-        self.university_name = university_name
-        self.document_name = document_name
-
 def read_universities(university_file):
-    name_file = "universities.txt"
-    universities = open (name_file, 'a')
-    universities.write(university_name +'\n')
-    universities.close()
-    return "university saved: " + university_name
+    universities = []
+    try: 
+        file = open(university_file, "r")
+        name = file.readline()
+        while name != "":
+              name = name.replace("\n", "")
+              country = file.readline().replace("\n", "")
+              deadline = file.readline().replace("\n", "")
+              track = file.readline().replace("\n", "")
+              universities.append(Myuniversitylist(name, deadline, country, decision_track)
+              name= file.readline()
+         file.close()
+      except FileNotFoundError:
+         print("File not found:", university_file)
+      return universities
 
 def read_application(application_file):
     file = "application.txt"
