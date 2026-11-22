@@ -1,10 +1,15 @@
 name_file= "universities.txt"
+application_status= ("started", "in progress", "not started")
+
 class Myuniversitylist():
   def __init__(self, university_name, deadline, university_country, decision_track):
       self.university_name= university_name
       self.deadline = deadline
       self.university_country = country
-      self.decision_track = decision_track
+      self.application_track = application_track
+
+class application():
+  def__init__(self,
 
 def add_university(universities, university):
     universities.append(university)
