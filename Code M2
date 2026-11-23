@@ -182,9 +182,10 @@ choice = ""
             for line in search_applications(applications, university_name):
                 print(line)
         elif choice == "7":
+            document_name = input("Document name: ")
             university_name = input ("add university_name: ")
             for university in university_name(add_document name, university): 
-                print(university)
+                print(add_document(documents, university_name, document_name))
         elif choice == "8":
             university_name = input("University name: ")
             new_name = input("New document name: ")
