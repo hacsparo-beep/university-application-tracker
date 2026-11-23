@@ -123,7 +123,7 @@ def remove_document(documents, university_name, document_name):
         return "Document removed."
     return "Document not found."
 
-def save_all_files():
+def save_all_files(universities, applications, documents):
     file = open(name_file, "w")
     for university in universities:
         file.write(university.university_name + "\n")
@@ -140,8 +140,9 @@ def save_all_files():
     for document in documents:
         file.write(document + "\n")
     file.close()
+save = return save_all_files()
 
-def main():
+def main(choice):
     universities = read_universities(name_file)
     applications = read_application(application_file)
     documents = read_documents(document_file)
@@ -195,5 +196,7 @@ choice = ""
             print (remove_document(document, document_name)
         elif choice == "0": 
             print ("quit")
+        else:
+            print("Please choose a number from the menu.")
 
 main()
