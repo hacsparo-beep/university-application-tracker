@@ -145,4 +145,20 @@ def main():
     universities = read_universities(name_file)
     applications = read_application(application_file)
     documents = read_documents(document_file)
+
+choice = ""
+    while choice != "0":
+        print()
+        print("1. Add university")
+        print("2. Remove university")
+        print("3. List universities")
+        print("4. Start application")
+        print("5. Update application status")
+        print("6. Search applications")
+        print("7. Add document")
+        print("8. Change document")
+        print("9. Remove document")
+        print("0. Quit")
+        choice = input("Choose: ")
+
 main()
