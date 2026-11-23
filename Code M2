@@ -167,9 +167,15 @@ choice = ""
             university_name = input("University name: ")
             print(remove_university(universities, university_name))
         elif choice == "3":
-            for list in universities 
+            for list in list_universities(universities)
             print (list)
-
+        elif choice == "4":
+            university_name = input("University name: ")
+            print(start_application(universities, applications, university_name))
+        elief choice == "5":
+            university_name = input("University name: ")
+            status = input("New status (not started / in progress / submitted): ")
+            print(update_status(applications, university_name, status))
           
 
 main()
