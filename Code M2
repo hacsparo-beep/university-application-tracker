@@ -140,7 +140,6 @@ def save_all_files(universities, applications, documents):
     for document in documents:
         file.write(document + "\n")
     file.close()
-save = return save_all_files()
 
 def main(choice):
     universities = read_universities(name_file)
@@ -192,11 +191,12 @@ choice = ""
             new_name = input("New document name: ")
             print(change_document(documents, university_name, old_name, new_name))
         elif choice == "9": 
+            university_name = input("University name: ")
             document_name = input ("document name: ")
-            print (remove_document(document, document_name)
+            print(remove_document(documents, university_name, document_name))
         elif choice == "0": 
             print ("quit")
         else:
             print("Please choose a number from the menu.")
-
+        save_all_files(universities, applications, documents)
 main()
