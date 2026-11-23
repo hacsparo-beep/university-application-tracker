@@ -187,6 +187,7 @@ choice = ""
                 print(university)
         elif choice == "8":
             university_name = input("University name: ")
+            new_name = input("New document name: ")
             print(change_document(documents, university_name, old_name, new_name))
         elif choice == "9": 
             university_name = input("University name: ")
