@@ -141,7 +141,7 @@ def save_all_files(universities, applications, documents):
         file.write(document + "\n")
     file.close()
 
-def main(choice):
+def main():
     universities = read_universities(name_file)
     applications = read_application(application_file)
     documents = read_documents(document_file)
