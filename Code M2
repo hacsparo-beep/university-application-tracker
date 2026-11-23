@@ -163,6 +163,7 @@ choice = ""
        
         if choice == "1":
             university_name = input("University name: ")
+            print (university_name)
         elif choice == "2":
             university_name = input("University name: ")
             print(remove_university(universities, university_name))
@@ -172,10 +173,18 @@ choice = ""
         elif choice == "4":
             university_name = input("University name: ")
             print(start_application(universities, applications, university_name))
-        elief choice == "5":
+        elif choice == "5":
             university_name = input("University name: ")
             status = input("New status (not started / in progress / submitted): ")
             print(update_status(applications, university_name, status))
+        elif choice == "6":
+            university_name = input("University name: ")
+            for line in search_applications(applications, university_name):
+                print(line)
+        elif choice == "7"
+            university_name = input ("add university_name: ")
+            for university in university_name(add_document name, university): 
+                print(university)
           
 
 main()
